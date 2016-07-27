@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TemporaryVariables.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2><b>TEAM SKILLS</b></h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.Name)-->
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSort})
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.Team)-->
+            @Html.ActionLink("Team", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.Role)-->
+            @Html.ActionLink("Role", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.Email)-->
+            @Html.ActionLink("Email", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.JavaYears)-->
+            @Html.ActionLink("Java Years", "Index", new { sortOrder = ViewBag.IntSort })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.SQLYears)-->
+            @Html.ActionLink("SQL Years", "Index", new { sortOrder = ViewBag.IntegerSortParm })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.RubyYears)-->
+            @Html.ActionLink("Ruby Years", "Index", new { sortOrder = ViewBag.IntegerSortParm })
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.JavascriptYears)-->
+            @Html.ActionLink("Javascript Years", "Index", new { sortOrder = ViewBag.IntegerSortParm })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JavaYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SQLYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RubyYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JavascriptYears)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MemberId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MemberId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MemberId })
+        </td>
+    </tr>
+}
+</table>
+<img src="~/images/managerPic1.png" />
+<img src="~/images/managerPic2-1.png" />

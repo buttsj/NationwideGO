@@ -1,0 +1,82 @@
+﻿@model TemporaryVariables.Models.Member
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JavaYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JavaYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SQLYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SQLYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RubyYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RubyYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JavascriptYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JavascriptYears)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MemberId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
